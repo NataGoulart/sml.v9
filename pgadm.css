@@ -1,0 +1,92 @@
+body {
+    background-image: url('imagens/ceuadm.png');
+    background-size: 2400px;
+    background-position: center;
+    }
+
+    header{
+        display: flex;
+        justify-content: space-around;
+        padding-top: 1rem;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        top: 0;
+        right: 0;
+        z-index: 800;
+        position: fixed;
+        transition: all.35s ease;
+        background-color:  rgb(44, 97, 146);
+        padding: 1px 1%;
+    }
+
+
+
+    .name
+    {
+      width: 40%;
+      height: 300px;
+      margin-top: 270px;
+      background-color: #f2310500;
+      box-shadow:         30px 20px 70px rgba(0, 0, 0, 0.33);
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      justify-items: center;
+      align-content: center;
+      align-items: center;       
+      border-radius: 1000px; /*deixa borda redonda*/ 
+    }
+
+    .title
+    {
+      position: absolute;
+      width: 50%;
+      height: 10px;
+      margin-top: -200px;
+      background-color: #db565600;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      justify-items: center;
+      align-content: center;
+      align-items: center;        
+    }
+
+    .enviar{
+        border: 1px solid rgb(61, 106, 255);
+        font-size: 14px;
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 2px;
+        background: #17a4db;
+        color: whitesmoke;
+        border-radius: 8px; /*deixa borda redonda*/
+    }
+
+    .enviar{
+        height: 50px;
+        border: 1px solid rgb(61, 106, 255);
+        font-size: 18px;
+        position: absolute;
+        margin-top: 10px;
+        margin-left: -40px;
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 2px;
+        background: #17a4db;
+        color: whitesmoke;
+        border-radius: 8px; /*deixa borda redonda*/
+    }
+
+    .enviar:hover{
+        filter: brightness(0.8); 
+    }
+
+
+
+
+
+
+
+    

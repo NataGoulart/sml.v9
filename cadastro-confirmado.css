@@ -1,0 +1,61 @@
+body
+{
+background-color: rgb(252, 192, 221);
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+overflow: hidden;
+
+}
+
+.area-login
+{
+display: flex;
+height: 100vh;
+justify-content: center;
+align-items: center;
+justify-content: center;
+align-items: center;
+}
+.login
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+background-color: rgb(201, 222, 250);
+width: 290px;
+height: 200px;
+padding: 40px;
+border-radius: 12%;
+
+}
+
+.login form 
+{
+display: flex;
+flex-direction: column;
+width: 100%;
+}
+
+.login input
+{
+background-color:rgb(247, 139, 196) ;
+margin-top: 10px;
+border:  none;
+height: 45px;
+outline: none;
+border-radius: 8px;
+color: aliceblue;
+padding-left: 10px;
+
+}
+.login img
+{
+    width: 250px;
+    height: auto;
+}
+input::placeholder
+{
+color: aliceblue;
+font-size: 14px;
+
+}

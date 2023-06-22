@@ -1,0 +1,70 @@
+body {
+    background-image: url('imagens/fundo.avif');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;        
+    }
+
+    
+    
+    
+
+      .tudo
+      {
+        width: 50%;
+        height: 200px;
+        margin-top: 170px;
+        background-color: #56c5db;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        justify-items: center;
+        align-content: center;
+        align-items: center;        
+      }
+
+      .img
+      {
+        width: 30%;
+        height: 100%;
+        margin-left: 5%;
+        background-color: #d9db56;       
+      }
+
+      .np
+      {
+        width: 30%;
+        height: 100%;
+        margin-left: 5%;
+        background-color: #d26d2d;  
+      }
+
+      .nada
+      {
+        width: 30%;
+        height: 100%;
+        margin-left: 5%;
+        background-color: #19b719;  
+      }
+
+      header{
+        display: flex;
+        justify-content: space-around;
+        padding-top: 1rem;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        top: 0;
+        right: 0;
+        z-index: 800;
+        position: fixed;
+        transition: all.35s ease;
+        background-color:  rgba(46, 146, 44, 0.349);
+        box-shadow:         30px 20px 70px rgba(0, 0, 0, 0.33);
+        padding: 1px 1%;
+    }

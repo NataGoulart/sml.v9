@@ -1,0 +1,22 @@
+body
+{
+  overflow: hidden;/*ESCONDE BARRA DE ROLAGEM*/
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 1rem;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 800;
+    position: fixed;
+    transition: all.35s ease;
+    background-color:  rgb(44, 97, 146);
+    box-shadow:         30px 20px 70px rgba(0, 0, 0, 0.33);
+    padding: 1px 1%;
+}
+

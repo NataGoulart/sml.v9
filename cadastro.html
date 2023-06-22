@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smiling</title>
+    <link rel="stylesheet" href="cadastro.css">
+    <link rel="shortcut icon" href="imagens/icone-da-pagina.png" type="image/x-icon">
+</head>
+<body background="imagens/fundo cadastro.png">
+    <section class="area-login">
+        <div class="login">
+        <div class="logo">
+            <a href="index.html"><img src="imagens/logo-cadastro.png"></a>
+        </div>
+        
+        <form action="crud.php" method="post">
+            <input type="text" name="nome" placeholder="NOME DO USUARIO" autofocus> 
+            <input id="senha1" type="password" name="senha" placeholder="CRIE UMA SENHA" autofocus> 
+            <input onkeyup="verificar();" id="senha2" type="password" name="senha2" placeholder="REPITA A SENHA" autofocus>
+            <input type="text" name="cidede" placeholder="CIDADE" autofocus>
+            <input type="text" name="email" placeholder="EMAIL" autofocus>
+             
+                <input type="submit" value="CADASTRAR">
+            
+        </form>
+        <p> Já tenho conta<a href="login.html">  ENTRAR!</a>
+            <br>
+            Voltar para pagina inicial  <a href="index.html">pagina inicial</a>
+        </p></p>
+        </div>
+
+        </div>
+
+    </section>
+</body>
+<script>
+    function verificar()
+    {
+        if(senha1.value==senha2.value)
+        {
+            senha2.style.color="green";
+            senha1.style.color="green";
+        }
+        if(senha1.value!=senha2.value)
+        {
+            senha2.style.color="red";
+            senha1.style.color="red";
+        }
+    }
+</script>
+</html>

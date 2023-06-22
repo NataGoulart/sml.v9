@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="car.css">
+    <link rel="shortcut icon" href="imagens/icone-da-pagina.png" type="image/x-icon">
+    <script src="car.js" async></script>
+    <title>Smiling</title>
+  </head>
+  <body>
+    <header class="main-header">
+     <br>
+     <a href="index.html">
+     <img src="imagens/logo.png" alt=""></a>
+     
+     <a href="cartao.html">
+      <button class="cart">Cadastrar cartão</button></a> 
+      <!-- Adicionar imagem de fundo no CSS -->
+    </header>
+
+    <main class="main-section">
+  
+      </section>
+
+      <section class="container normal-section">
+        <h2 class="section-title">Produtos Disponíveis</h2>
+
+
+          <div>
+              <img src="imagens/Volante_Fom_Fom-removebg-preview.png" alt="volante" class="product-image">
+              <span class="product-price">R$40,00</span>
+              <button onclick="comprar(1)" class="button-hover-background"> COMPRAR </button>
+              
+           </div>
+    
+         
+ 
+         <div class="cacto">
+            <img src="imagens/Cacto_Dançante-removebg-preview.png" alt="Cacto" class="product-image">
+              <span class="product-price">R$85,00</span>
+              <button type="button" class="button-hover-background">Comprar</button>
+         </div>
+
+
+         <div>
+            <img src="imagens/MINI_COZINHA_INFANTIL_COMPLETA-removebg-preview.png" alt="Minicozinha" class="product-image">
+              <span class="product-price">R$199,99</span>
+              <button type="button" class="button-hover-background">Comprar</button>
+        </div>
+
+        <div class="bita">
+          <img src="imagens/Fazendinha_Mundo_Bita-removebg-preview.png" alt=" Mundo Bita" class="product-image">
+            <span class="product-price">R$179,99</span>
+            <button type="button" class="button-hover-background">Comprar</button>
+       </div>
+    
+        
+      </section>
+
+      <section class="container normal-section">
+        <h2 class="section-title">Carrinho</h2>
+
+        <table class="cart-table">
+          <thead>
+            <tr>
+              <th class="table-head-item first-col">Item</th>
+              <th class="table-head-item second-col">Preço</th>
+              <th class="table-head-item third-col">Quantidade</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <!-- <tr class="cart-product">
+              <td class="product-identification">
+                <img src="images/produto2.png" alt="Miniatura" class="cart-product-image">
+                <strong class="cart-product-title">Miniatura</strong>
+              </td>
+              <td>
+                <span class="cart-product-price">R$69,90</span>
+              </td>
+              <td>
+                <input type="number" value="2" min="0" class="product-qtd-input">
+                <button type="button" class="remove-product-button">Remover</button>
+              </td>
+            </tr>
+            <tr class="cart-product">
+              <td class="product-identification">
+                <img src="images/poster3.png" alt="Poster 3" class="cart-product-image">
+                <strong class="cart-product-title">Poster 3</strong>
+              </td>
+              <td>
+                <span class="cart-product-price">R$19,99</span>
+              </td>
+              <td>
+                <input type="number" value="1" min="0" class="product-qtd-input">
+                <button type="button" class="remove-product-button">Remover</button>
+              </td>
+            </tr> -->
+          </tbody>
+
+          <tfoot>
+            <tr>
+              <td colspan="3" class="cart-total-container">
+                <strong>Total</strong>
+                <span>R$00,00</span>
+              </td>
+            </tr>
+          </tfoot>
+      
+
+    
+        <div class="comprar"><button type="button" class="purchase-button">Comprar</button></div>
+      </section>
+    </main>
+
+
+    <script>
+      function comprar(Id_produto)
+      {
+        window.open("comprar.php?id_produto="+Id_produto,"_self")
+      }
+
+    </script>
+    
+ </body>
+</html>

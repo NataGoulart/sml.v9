@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.js" type="text/javascript"></script>
+    <title>Smiling</title>
+    <link rel="stylesheet" href="faleconosco.css">
+    <link rel="shortcut icon" href="imagens/icone-da-pagina.png" type="image/x-icon">
+</head>
+<body>
+
+
+    <center><a href="index.html">
+  <img class="logo" src="imagens/logo.png"></a></center>
+    <div class="escrita"><b>Mande sua mensagem:</b></div>
+    <input class="mensagem" type="text" id="mensagem"> 
+    <br>
+    <button class="bt" onclick="Enviar();"><b>Enviar</b></button>
+    <br> <br>
+    <div class="resposta" id="resposta">  </div>
+
+
+</body>
+
+<script>
+
+  topico = "senai/fofoquinha2";  // Variável que ficará no servidor MQTT
+
+  // Conexão:
+  client = new Paho.MQTT.Client("broker.hivemq.com", Number(8000), "");
+
+  // Funções executadas quando a conexão é perdida e quando uma mensagem chega:
+  client.onConnectionLost = ConexaoPerdida;
+  client.onMessageArrived = MensagemRecebida;
+
+  // Função chamada quando a conexão for realizada:
+  client.connect({onSuccess:Conectar});
+
+  // A função Conectar deve criar a variável (tópico) no computador remoto:
+  function Conectar() {
+    
+    client.subscribe(topico);  // Tópico (variável) criado no servidor MQTT
+    
+  }
+  
+  function ConexaoPerdida(responseObject) {
+    if (responseObject.errorCode !== 0) {
+      resposta.innerHTML += "Desconectado";
+    }
+  }
+
+  // Função executada quando a variável (tópico) no servidor receber uma mensagem:
+  function MensagemRecebida(message) {
+      resposta.innerHTML += "<br><br>" + message.payloadString;
+      texto=message.payloadString;
+      expressao= /http/g;
+      teste = expressao.test(texto)
+      console.log(teste)
+      if(teste==false)
+      {
+        resposta.innerHTML += texto + "<br>"
+      }
+  }
+
+  function Enviar()
+  {
+    texto = mensagem.value;
+    //expressao=/[0-9]/g;
+   // r=expressao.test(texto)
+    if (texto !="") //&& r==false
+
+    {
+
+      texto = "<a href='https://github.com/andrebalexandre/aplicativo-mp/blob/main/pg_pagamentos.html'> Suporte: </a> "  + texto
+        mensagem.value=""
+
+        message = new Paho.MQTT.Message(texto);
+        message.destinationName = topico;
+        client.send(message);
+    }
+   
+   
+  }
+
+</script>
+
+</html>

@@ -1,0 +1,95 @@
+body
+{
+background-color: rgb(252, 192, 221);
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+overflow: hidden;
+
+}
+
+.area-login
+{
+display: flex;
+height: 100vh;
+justify-content: center;
+align-items: center;
+justify-content: center;
+align-items: center;
+}
+.login
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+background-color: rgb(248, 144, 196);
+width: 355px;
+height: 320px;
+padding: 35px;
+border-radius: 12%;
+
+}
+
+.login form 
+{
+display: flex;
+flex-direction: column;
+width: 100%;
+}
+
+.login input
+{
+background-color:rgb(248, 93, 176) ;
+margin-top: 10px;
+border:  none;
+height: 45px;
+outline: none;
+border-radius: 8px;
+color: aliceblue;
+padding-left: 10px;
+
+}
+
+
+.login img
+{
+    width: 250px;
+    height: auto;
+}
+input::placeholder
+{
+color: aliceblue;
+font-size: 14px;
+
+}
+
+.ENTRAR{
+    background-color:rgb(248, 93, 176) ;
+margin-top: 10px;
+border:  none;
+height: 45px;
+outline: none;
+border-radius: 8px;
+color: aliceblue;
+padding-left: 10px;
+}
+
+.ntc{
+    position: absolute;
+    width: 250px;
+    height: 400px;
+    margin-top: 650px; /*colocar div em baixo*/
+}
+
+.Admin {
+    position: absolute;
+    margin-top: -320px;
+    left: 10px;
+    border: 1px solid rgb(61, 106, 255);
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    background: #17a4db;
+    color: whitesmoke;
+    border-radius: 8px; /*deixa borda redonda*/
+
+  }
